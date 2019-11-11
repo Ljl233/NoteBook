@@ -57,3 +57,36 @@ public void smoothScrollTo(int destX, int destY) {
     }
 ```
 startScroll会不断调用computeScoll方法来实现滑动效果
+
+
+# View 工作流程
+
+### measureSpec
+> A MeasureSpec encapsulates the layout requirements passed from parent to child. Each MeasureSpec represents a requirement for either the width or the height. A MeasureSpec is comprised of a size and a mode. There are three possible modes:
+
+
+- UNSPECIFIED
+
+The parent has not imposed any constraint on the child. It can be whatever size it wants.
+- EXACTLY
+
+The parent has determined an exact size for the child. The child is going to be given those bounds regardless of how big it wants to be.
+- AT_MOST
+
+The child can be as large as it wants up to the specified size.
+
+
+
+
+#### Activity 的构成
+
+![Activity构成](http://artimg.ishenping.com/20190731052934499_FMECKH.jpg)
+```
+Activity-> setContentView(int)
+    ||
+PhoneWindow-> setContentView(view)
+    ||
+generalDecor(view,layoutPamas)
+    ||
+加载布局，包含titleBar  、contentView
+```
