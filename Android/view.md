@@ -92,10 +92,30 @@ generalDecor(view,layoutPamas)
     ||
 加载布局，包含titleBar、contentView
 ```
-sds
 
 
 # 自定义View
+## 对wrap_content属性进行处理
+```java
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec,heightMeasureSpec);//调用父类view的onMeasure方法 对match-parent 和 指定数字长度进行测量
+        int widthSpecMode = MeasureSpec.getMode(widthMeasureSpec);
+        int widthSpecSize = MeasureSpec.getSize(widthMeasureSpec);
+        int heightSpecMode = MeasureSpec.getMode(heightMeasureSpec);
+        int heightSpecSize = MeasureSpec.getSize(heightMeasureSpec);
+//AT_MOST 指的就是 wrap-content
+//根据不同情况设置固定的值，也可以通过测量指定子view的高度和宽度来确定
+//setMeasureDimension 的单位 是 px
+        if (widthSpecMode == MeasureSpec.AT_MOST && heightSpecMode == MeasureSpec.AT_MOST) {
+            setMeasuredDimension(300, 300);
+        } else if (widthSpecMode == MeasureSpec.AT_MOST) {
+            setMeasuredDimension(300, heightSpecSize);
+        } else if (heightSpecMode == MeasureSpec.AT_MOST) {
+            setMeasuredDimension(widthSpecSize, 300);
+        }
+    }
+```
 
 ## 继承View类
 
@@ -210,9 +230,10 @@ mTypedArray.recycle();
 ## 直接继承ViewGroup (实现简单的ViewPager)
 # 自定义View 迷惑行为
 - inflate最后一个参数为true，一般情况都是flase
-- 自动notitle？
-    -继承的是Activity 没有titleBar，AppcompatActivity有Bar
 
-- 自动margin？
-- 初始化设置标题
+
 - 多个构造器
+
+
+
+# dp px sp dpi
