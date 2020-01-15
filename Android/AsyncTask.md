@@ -1,7 +1,9 @@
 # AsyncTask 源码分析
+参考：https://blog.csdn.net/iispring/article/details/50670388
 
 ## AsyncTask 使用流程
 ![https://blog.csdn.net/carson_ho/article/details/79314325](https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzk0NDM2NS0zMWRmNzk0MDA2YzY5NjIxLnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwJTdDaW1hZ2VWaWV3Mi8yL3cvMTI0MA)
+图源：https://blog.csdn.net/carson_ho/article/details/79314326
 
 
 ## 开始准备工作
