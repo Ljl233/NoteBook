@@ -5,6 +5,13 @@ View 自身的坐标
 
 - 三个构造器区别，使用情况
 
+# View的绘制流程
+测量(measure)->布局(layout)->绘制(draw)
+
+# padding 和 margin的区别
+- padding的值是包含在这个控件的大小里的，是会影响布局的实际的显示大小的
+- margin的值是指当前控件距离其他控件或者父控件的距离，不会影响实际大小
+
 #  动画
 ##### 用xml文件设置动画
 - res目录下新建anim文件，并创建`translate.xml`
@@ -63,21 +70,25 @@ startScroll会不断调用computeScoll方法来实现滑动效果
 
 # View 工作流程
 
-### measureSpec
+## measureSpec
 > A MeasureSpec encapsulates the layout requirements passed from parent to child. Each MeasureSpec represents a requirement for either the width or the height. A MeasureSpec is comprised of a size and a mode. There are three possible modes:
 
 
 - UNSPECIFIED
 
 The parent has not imposed any constraint on the child. It can be whatever size it wants.
+
 - EXACTLY
 
 The parent has determined an exact size for the child. The child is going to be given those bounds regardless of how big it wants to be.
+
 - AT_MOST
 
 The child can be as large as it wants up to the specified size.
 
-
+- `match_parent -> EXACTLY`
+- `wrap_content -> AT_MOST`
+- `100dp -> EXACTLY`
 
 
 #### Activity 的构成
@@ -104,9 +115,9 @@ generalDecor(view,layoutPamas)
         int widthSpecSize = MeasureSpec.getSize(widthMeasureSpec);
         int heightSpecMode = MeasureSpec.getMode(heightMeasureSpec);
         int heightSpecSize = MeasureSpec.getSize(heightMeasureSpec);
-//AT_MOST 指的就是 wrap-content
-//根据不同情况设置固定的值，也可以通过测量指定子view的高度和宽度来确定
-//setMeasureDimension 的单位 是 px
+    //AT_MOST 指的就是 wrap-content
+    //根据不同情况设置固定的值，也可以通过测量指定子view的高度和宽度来确定
+    //setMeasureDimension 的单位 是 px
         if (widthSpecMode == MeasureSpec.AT_MOST && heightSpecMode == MeasureSpec.AT_MOST) {
             setMeasuredDimension(300, 300);
         } else if (widthSpecMode == MeasureSpec.AT_MOST) {
