@@ -1,12 +1,34 @@
-# 包装类
+# JDK JVM JRE
+- JDK (Java Development Kit)      Java 开发工具包
+- JRE (Java Runtime Environment)  Java 运行时环境
+- JVM (Java Virtual Machine)      Java 虚拟机
+JDK 包括 JRE 包括 JVM 
+
+JRE 提供了运行Java代码所需要的环境 即各种运行和lib库，但是不包含任何编译调试工具
+
+Java 生成的字节码是运行在虚拟机上的，虚拟机可以跨平台安装
+
+- 环境变量：etc/profile
+```
+export JAVA_HOME=/usr/local/jdk1.7.0_71
+
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+export PATH=$JAVA_HOME/bin:$PATH
+```
+
+
+
+
+
+# 包装类 
 > 8大基本数据类型： int float double char boolean byte short long 
 > 变量的声明就是在内存中分配一块连续的空间，并给这个位置取个名字指向这块内存空间所在的位置。
 
 > 每一个基本类型都有一个包装类，int 对应的包装类是 Integer，Integer只有实例化之后蔡能使用，而int可以直接使用。
-> Java中很多代码只能操作对象，为了操作基本数据类型，需要其对应的包装类。
+> Java中很多代码 只能操作对象，为了操作基本数据类型，需要其对应的包装类。
 > 包装类提供了很多方法，可以方便对基本数据类型的操作。
 
 > 不可变性：
 > 包装类都是不可变的类型，一旦实例被创建，就不可修改。
 > 这样是为了保证安全的数据共享，让程序变得更加简单安全，尤其是在多线程的环境下，避免了数据在不同线程同时被修改的情况发生。
-
