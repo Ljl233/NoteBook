@@ -1,4 +1,4 @@
-# JDK JVM JRE
+# JDK JVM JRE :white_check_mark:
 - JDK (Java Development Kit)      Java 开发工具包
 - JRE (Java Runtime Environment)  Java 运行时环境
 - JVM (Java Virtual Machine)      Java 虚拟机
@@ -18,10 +18,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 ```
 
 
-
-
-
-# 包装类 
+# 包装类 :white_check_mark:
 > 8大基本数据类型： int float double char boolean byte short long 
 > 变量的声明就是在内存中分配一块连续的空间，并给这个位置取个名字指向这块内存空间所在的位置。
 
@@ -32,3 +29,28 @@ export PATH=$JAVA_HOME/bin:$PATH
 > 不可变性：
 > 包装类都是不可变的类型，一旦实例被创建，就不可修改。
 > 这样是为了保证安全的数据共享，让程序变得更加简单安全，尤其是在多线程的环境下，避免了数据在不同线程同时被修改的情况发生。
+
+# Java 各访问修饰符的意义和常用用法和区别 :white_check_mark:
+
+# java中参数是值传递还是引用传递 :white_check_mark:
+
+# 抽象类和接口的区别 :white_check_mark:
+
+# 面向对象的四大特征
+- 封装
+- 抽象
+- 继承
+- 多态
+
+
+# String、StringBuffer和StringBuilder的区别？
+
+# String a=""和String a=new String("")的的关系和异同？
+
+# Object的equal()和==的区别？
+
+# 重写和重载的区别？
+
+# 为什么匿名内部类中使用局部变量要用final修饰？
+
+# 成员变量和局部变量的区别？
