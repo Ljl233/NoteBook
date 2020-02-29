@@ -12,6 +12,8 @@
 ## 动态添加 Fragment
 1. xml布局
 2. 在Fragment的 onCreateView 中利用xml文件，创建view
+3. 在Activity中放置一个FrameLayout充当content
+4. 
 
 
 # FragmentManager
