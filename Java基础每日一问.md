@@ -54,3 +54,17 @@ export PATH=$JAVA_HOME/bin:$PATH
 # 为什么匿名内部类中使用局部变量要用final修饰？
 
 # 成员变量和局部变量的区别？
+
+# 原子性，有序性，可见性
+
+# String str="i"与 String str=new String("i")一样吗？
+
+#  List、Set、Map 之间的区别是什么？
+
+#  守护线程是什么？
+
+# 线程有哪些状态？
+
+# 线程的 run()和 start()有什么区别？
+
+#  什么是死锁？
