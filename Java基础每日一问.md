@@ -40,44 +40,33 @@ export PATH=$JAVA_HOME/bin:$PATH
 - 封装
 - 抽象
 - 继承
-- 多态或一个变
+- 多态
+
+# String、StringBuffer和StringBuilder的区别？
+
+# String a=""和String a=new String("")的的关系和异同？
+
+# Object的equal()和==的区别？
+
+# 重写和重载的区别？
+
+# 为什么匿名内部类中使用局部变量要用final修饰？
+
+# 成员变量和局部变量的区别？
+
+# 原子性，有序性，可见性
+
+# String str="i"与 String str=new String("i")一样吗？
 
 
-# Stri或一个变
+#  List、Set、Map 之间的区别是什么？
 
-# Stri或一个变
 
-# Obje或一个变
-
-# 重写或一个变
-
-# 为什或一个变
-
-# 成员或一个变
-
-# List或一个变List？
-
-# Java或一个变
-
-# 简述或一个变
-
-# lamb或一个变
-
-# 抽象或一个变
-
-# 什么或一个变
-
-# 什么或一个变
-
-# 怎么或一个变
-
-#  Lis或一个变
-
-# 线程或一个变
-
-# 什么或一个变
+#  守护线程是什么？
 
 # 线程有哪些状态？
+
+# 线程的 run()和 start()有什么区别？
 
 #  什么是死锁？
 - 死锁是锁无法被解开
@@ -85,8 +74,25 @@ export PATH=$JAVA_HOME/bin:$PATH
 - 但是假如 A线程获得了代码a的锁，a想要调用代码b，但是b被B获得了锁，就要等待B结束，而b需要调用a，又要等待A结束，这样形成了一个死循环，也就是死锁。
 
 
-# 守护线程是什么？
 
+# 什么是闭包(closure)？
+- 闭包是能够读取其他函数内部的函数。
+- 在JavaScript中只有函数内部的子函数才能读取函数的局部变量
+- 闭包其实就是一个函数内部的函数
+- 本质上，闭包是一个将函数内部与函数外部连接的桥梁
+- 一般来说闭包就是lambda表达式
 
+```kotlin
+fun a(): (Int) -> Int {
+    val i = 1
+    fun b(a: Int): Int {
+        return i + a;
+    }
+    return ::b
+}
 
-
+fun main() {
+    val res = a()
+    println(res(1))
+}
+```
