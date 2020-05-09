@@ -145,10 +145,11 @@ final class $Proxy0 extends Proxy implements ProxyTest.IService {
     private static Method m0;
 
     static {
+        m3 = Class.forName("ProxyTest$IService")
+                .getMethod("buyTicket", new Class[0]);
+                
         m1 = Class.forName("java.lang.Object").getMethod("equals",
                 new Class[]{Class.forName("java.lang.Object")});
-        m3 = Class.forName("laoma.demo.proxy.SimpleJDKDynamicProxyDemo$IService")
-                .getMethod("buyTicket", new Class[0]);
         m2 = Class.forName("java.lang.Object").getMethod("toString", new Class[0]);
         m0 = Class.forName("java.lang.Object").getMethod("hashCode", new Class[0]);
     }
